@@ -39,7 +39,10 @@ cat << EOF
 # This is a shell archive.  Save it in a file, remove anything before
 # this line, and then unpack it by entering "sh file".  Note, it may
 # create directories; files and directories will be owned by you and
-# have default permissions.
+# have default permissions.  The shell archive is a script that requires
+# the unvis(1) program to unpack.  If you do not have unvis, you can
+# get it from the sharutils package for GNU/Linux, and modern BSD
+# systems.
 #
 # This archive contains:
 #
