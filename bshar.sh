@@ -1,8 +1,5 @@
 #!/bin/sh -
 #
-#	$OpenBSD: shar.sh,v 1.3 2003/06/03 02:56:16 millert Exp $
-#	$NetBSD: shar.sh,v 1.2 1994/12/21 08:42:04 jtc Exp $
-#
 # Copyright (c) 1990, 1993
 #	The Regents of the University of California.  All rights reserved.
 #
@@ -62,8 +59,8 @@ do
 		echo "mkdir -p $i > /dev/null 2>&1"
 	else
 		echo "echo x - $i"
-		echo "sed 's/^X//' << 'END-of-$i' | b64decode -o $i"
-		b64encode $i $i | sed 's/^/X/'
+		echo "sed 's/^X//' << 'END-of-$i' | unvis > $i"
+		vis -f $i | sed 's/^/X/'
 		echo "END-of-$i"
 	fi
 done
