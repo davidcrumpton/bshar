@@ -66,9 +66,6 @@ do
 		b64encode $i $i | sed 's/^/X/'
 		echo "END-of-$i"
 	fi
-#		echo "sed 's/^X//' >$i << 'END-of-$i'"
-#		sed 's/^/X/' $i
-#		echo "END-of-$i"
 done
 echo exit
 echo ""
